@@ -10,6 +10,9 @@ Add-Type @"
     public static extern IntPtr GetForegroundWindow();
 }
 "@
+
+[Console]::OutputEncoding = [Text.UTF8Encoding]::UTF8
+
 try {
 	while($n -ne 0){
 		$ActiveHandle = [UserWindows]::GetForegroundWindow()
